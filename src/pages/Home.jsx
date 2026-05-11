@@ -12,7 +12,7 @@ function Home() {
   
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/posts')
+    axios.get('https://trendbyak-backend.onrender.com/api/posts')
       .then(res => {
         setPosts(res.data.posts)
         setLoading(false)

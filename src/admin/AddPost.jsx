@@ -21,7 +21,7 @@ function AddPost() {
     formData.append('image', image)
 
     try {
-      await axios.post('http://localhost:3000/api/posts/create', formData)
+      await axios.post('https://trendbyak-backend.onrender.com/api/posts/create', formData)
       setMessage('Post published! ✅')
       setForm({ title: '', description: '', content: '', amazonLink: '', category: 'jewelry' })
       setImage(null)

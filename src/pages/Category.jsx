@@ -11,7 +11,7 @@ function Category() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/posts/category/${category}`)
+    axios.get(`https://trendbyak-backend.onrender.com/api/posts/category/${category}`)
       .then(res => {
         setPosts(res.data.posts)
         setLoading(false)

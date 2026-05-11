@@ -12,10 +12,10 @@ function PostDetail() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/posts/${slug}`)
+    axios.get(`https://trendbyak-backend.onrender.com/api/posts/${slug}`)
       .then(res => {
         setPost(res.data.post)
-        return axios.get(`http://localhost:3000/api/posts/category/${res.data.post.category}`)
+        return axios.get(`https://trendbyak-backend.onrender.com/api/posts/category/${res.data.post.category}`)
       })
       .then(res => {
         setRelated(res.data.posts.slice(0, 3))
