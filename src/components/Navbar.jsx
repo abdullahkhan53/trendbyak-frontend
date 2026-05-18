@@ -10,7 +10,6 @@ function Navbar() {
 
   return (
     <>
-      {/* Navbar */}
       <nav style={{background:'#1a1a1a', padding:'16px 24px', display:'flex', justifyContent:'space-between', alignItems:'center', position:'sticky', top:0, zIndex:50}}>
         <Link to="/" style={{fontFamily:'Playfair Display', fontSize:'22px', color:'#c9a96e', textDecoration:'none'}}>
           TrendByAK
@@ -24,7 +23,7 @@ function Navbar() {
         </button>
 
         {/* Desktop Links */}
-        <div className="nav-links" style={{display:'flex', gap:'24px'}}>
+        <div className="nav-links" style={{display:'flex', gap:'24px', alignItems:'center'}}>
           {categories.map(cat => (
             <Link key={cat} to={`/category/${cat}`}
               style={{
@@ -37,6 +36,26 @@ function Navbar() {
               onMouseEnter={e => e.target.style.color='#c9a96e'}
               onMouseLeave={e => e.target.style.color = currentCategory === cat ? '#c9a96e' : 'white'}>
               {cat}
+            </Link>
+          ))}
+
+          {/* Divider */}
+          <span style={{color:'#444', fontSize:'14px'}}>|</span>
+
+          {/* Extra Links */}
+          {[
+            {name:'About', path:'/about'},
+            {name:'Contact', path:'/contact'},
+          ].map(link => (
+            <Link key={link.name} to={link.path}
+              style={{
+                color: location.pathname === link.path ? '#c9a96e' : 'white',
+                textDecoration:'none',
+                fontSize:'14px',
+              }}
+              onMouseEnter={e => e.target.style.color='#c9a96e'}
+              onMouseLeave={e => e.target.style.color = location.pathname === link.path ? '#c9a96e' : 'white'}>
+              {link.name}
             </Link>
           ))}
         </div>
@@ -57,6 +76,23 @@ function Navbar() {
                 borderBottom:'1px solid #333'
               }}>
               {cat}
+            </Link>
+          ))}
+          {/* Mobile Extra Links */}
+          {[
+            {name:'About', path:'/about'},
+            {name:'Contact', path:'/contact'},
+          ].map(link => (
+            <Link key={link.name} to={link.path}
+              onClick={() => setMenuOpen(false)}
+              style={{
+                color: location.pathname === link.path ? '#c9a96e' : 'white',
+                textDecoration:'none',
+                fontSize:'16px',
+                padding:'8px 0',
+                borderBottom:'1px solid #333'
+              }}>
+              {link.name}
             </Link>
           ))}
         </div>

@@ -45,27 +45,27 @@ function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div>
-          <h4 style={{color:'white', fontSize:'16px', marginBottom:'20px', fontWeight:'600'}}>
-            Quick Links
-          </h4>
-          <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
-            {[
-              {name:'Home', path:'/'},
-              {name:'Latest Posts', path:'/'},
-              {name:'Jewelry', path:'/category/jewelry'},
-              {name:'Dresses', path:'/category/dresses'},
-            ].map(link => (
-              <Link key={link.name} to={link.path}
-                style={{color:'#999', textDecoration:'none', fontSize:'14px'}}
-                onMouseEnter={e => e.target.style.color='#c9a96e'}
-                onMouseLeave={e => e.target.style.color='#999'}>
-                {link.name}
-              </Link>
-            ))}
-          </div>
+       {/* Quick Links */}
+      <div>
+        <h4 style={{color:'white', fontSize:'16px', marginBottom:'20px', fontWeight:'600'}}>
+          Quick Links
+        </h4>
+        <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
+          {[
+            {name:'Home', path:'/'},
+            {name:'About Us', path:'/about'},
+            {name:'Contact', path:'/contact'},
+            {name:'Privacy Policy', path:'/privacy-policy'},
+          ].map(link => (
+            <Link key={link.name} to={link.path}
+              style={{color:'#999', textDecoration:'none', fontSize:'14px'}}
+              onMouseEnter={e => e.target.style.color='#c9a96e'}
+              onMouseLeave={e => e.target.style.color='#999'}>
+              {link.name}
+            </Link>
+          ))}
         </div>
+      </div>
 
         {/* Newsletter */}
         <div>
