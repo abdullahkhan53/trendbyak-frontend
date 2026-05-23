@@ -146,7 +146,7 @@ function Home() {
               onMouseLeave={e => { e.currentTarget.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'; e.currentTarget.style.transform='translateY(0)' }}>
               <div style={{position:'relative', overflow:'hidden'}}>
                 <img src={post.image} alt={post.title}
-                  style={{width:'100%', height:'240px', objectFit:'cover', transition:'transform 0.3s'}}
+                  style={{width:'100%', height:'320px', objectFit:'cover', transition:'transform 0.3s'}}
                   onMouseEnter={e => e.target.style.transform='scale(1.05)'}
                   onMouseLeave={e => e.target.style.transform='scale(1)'} />
                 <span style={{position:'absolute', top:'12px', left:'12px', background:'#c9a96e', color:'white', padding:'4px 12px', borderRadius:'20px', fontSize:'11px', textTransform:'capitalize'}}>

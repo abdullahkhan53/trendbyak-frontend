@@ -97,7 +97,7 @@ function PostDetail() {
 
         {/* Image */}
         <img src={post.image} alt={post.title}
-          style={{width:'100%', height:'clamp(250px, 45vw, 500px)', objectFit:'cover', borderRadius:'16px', marginBottom:'32px'}} />
+          style={{width:'100%', height:'clamp(250px, 45vw, 500px)', objectFit:'contain', borderRadius:'16px', marginBottom:'32px'}} />
 
         {/* Description */}
         <p style={{color:'#444', fontSize:'clamp(16px, 2vw, 20px)', marginBottom:'20px', fontWeight:'500', lineHeight:'1.7', borderLeft:'4px solid #c9a96e', paddingLeft:'20px'}}>
