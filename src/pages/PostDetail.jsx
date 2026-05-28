@@ -105,7 +105,7 @@ function PostDetail() {
         </p>
 
         {/* Content */}
-        <p style={{color:'#555', fontSize:'clamp(15px, 1.8vw, 17px)', lineHeight:'1.9', marginBottom:'40px'}}>
+        <p style={{color:'#555', fontSize:'clamp(15px, 1.8vw, 17px)', lineHeight:'1.9', marginBottom:'40px', whiteSpace: 'pre-line'}}>
           {post.content}
         </p>
 
